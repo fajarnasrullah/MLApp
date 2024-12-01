@@ -37,6 +37,21 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    androidResources {
+        noCompress ("tflite")
+    }
+
+    // import DownloadModels task
+    val assetsDir = projectDir.resolve("/src/main/assets")
+    val testAssetsDir = projectDir.resolve("/src/androidTest/assets")
+
+// Download default models; if you wish to use your own models then
+// place them in the "assets" directory and comment out this line.
+//    apply (from = "download_models.gradle")
+
+
+
 }
 
 dependencies {
@@ -50,10 +65,20 @@ dependencies {
     implementation (libs.androidx.camera.mlkit.vision)
     implementation (libs.androidx.camera.extensions)
 
+
+    //TF Lite
+    implementation ("org.tensorflow:tensorflow-lite-task-vision:0.4.0")
+    // Import the GPU delegate plugin Library for GPU inference
+    implementation ("org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.0")
+    implementation ("org.tensorflow:tensorflow-lite-gpu:2.9.0")
+
     //Google ML Kit Library
 
     //face detection
     implementation (libs.face.detection)
+
+    //text recognition
+    implementation ("com.google.mlkit:text-recognition:16.0.1")
 
     //camera source
     implementation (libs.play.services.mlkit.face.detection)
