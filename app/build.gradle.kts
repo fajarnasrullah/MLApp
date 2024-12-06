@@ -29,6 +29,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        mlModelBinding = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -67,6 +68,7 @@ dependencies {
 
 
     //TF Lite
+    implementation ("org.tensorflow:tensorflow-lite:2.11.0")
     implementation ("org.tensorflow:tensorflow-lite-task-vision:0.4.0")
     // Import the GPU delegate plugin Library for GPU inference
     implementation ("org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.0")
@@ -92,6 +94,8 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.play.services.vision.common)
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
