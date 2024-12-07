@@ -14,7 +14,7 @@
         android:layout_height="400dp"
         android:layout_margin="16dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/image_icon2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

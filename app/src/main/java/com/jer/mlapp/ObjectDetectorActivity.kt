@@ -67,7 +67,6 @@ class ObjectDetectorActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivityObjectDetectorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

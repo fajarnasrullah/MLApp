@@ -39,7 +39,6 @@ class ImageLabellingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivityImageLabellingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

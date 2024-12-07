@@ -12,7 +12,7 @@
         android:id="@+id/captureImage"
         android:layout_width="0dp"
         android:layout_height="350dp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/image_icon2"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,18 +39,18 @@
         app:layout_constraintTop_toBottomOf="@+id/tvResult"
         tools:layout_editor_absoluteX="16dp">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCapture"
             android:layout_marginEnd="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="Capture Image"
             android:layout_weight="1"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCopyText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="8dp"
             android:text="Copy Text"
             android:visibility="invisible"

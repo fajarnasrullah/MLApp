@@ -33,7 +33,6 @@ class TextRecognitionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
 
         binding = ActivityTextRecognitionBinding.inflate(layoutInflater)
         setContentView(binding.root)
